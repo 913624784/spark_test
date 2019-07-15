@@ -1,0 +1,7 @@
+database: cupid_bi
+tablename: base_request_info
+dt: 2018-07-31
+hour: 10
+quarter: 0
+matchfile: '*'
+notfields: efxse,swfd

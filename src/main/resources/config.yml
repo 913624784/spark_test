@@ -1,0 +1,19 @@
+new_table:
+  database: cupid_bi
+  tablename: base_request_info_new_test
+  partitions:
+    dt: '2018-07-31'
+    hour: 10
+    quarter: 0
+  matchfile: '*'
+  filtered_fields: video_event_id
+
+old_table:
+  database: cupid_bi
+  tablename: base_request_info
+  partitions:
+    dt: '2018-07-31'
+    hour: 10
+    quarter: 0
+  matchfile: '*'
+  filtered_fields: video_event_id
