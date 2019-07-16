@@ -14,7 +14,6 @@
             <artifactId>scala-library</artifactId>
             <version>2.11.12</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.11</artifactId>
@@ -66,12 +65,6 @@
             <artifactId>snakeyaml</artifactId>
             <version>1.17</version>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>org.jumpmind.symmetric</groupId>-->
-<!--            <artifactId>symmetric-csv</artifactId>-->
-<!--            <version>3.5.19</version>-->
-<!--        </dependency>-->
     </dependencies>
 
     <build>
