@@ -8,6 +8,25 @@
     <groupId>com.iqiyi.qzw</groupId>
     <artifactId>spark_test</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <scala.version>2.11.12</scala.version>
+        <scala.test.version>3.0.5</scala.test.version>
+        <scalaCompatVersion>2.11</scalaCompatVersion>
+        <spark.version>2.4.3</spark.version>
+        <kafka.version>0.10.2.0</kafka.version>
+        <mysql.version>5.1.46</mysql.version>
+        <protobuf.version>2.5.0</protobuf.version>
+        <scopt.version>3.7.0</scopt.version>
+        <snakeyaml.version>1.17</snakeyaml.version>
+        <okhttp.version>3.10.0</okhttp.version>
+        <redis.version>2.9.0</redis.version>
+        <fastjson.version>1.2.58</fastjson.version>
+        <commons.version>1.6</commons.version>
+        <mvel2.version>2.4.4.Final</mvel2.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.scala-lang</groupId>
@@ -65,6 +84,28 @@
             <artifactId>snakeyaml</artifactId>
             <version>1.17</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.scopt</groupId>
+            <artifactId>scopt_${scalaCompatVersion}</artifactId>
+            <version>${scopt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${snakeyaml.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

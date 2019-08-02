@@ -56,14 +56,20 @@ object readParquet {
     val spark = SparkSession.builder().appName("parquet").master("local[2]").getOrCreate()
     val df=spark.read.parquet(testPath)
     val dff=spark.read.parquet(onlinePath)
-    val showtest=df.rdd.map(line =>line.toString()).foreach(println)
-    val showonline=dff.rdd.map(line =>line.toString()).foreach(println)
+    val showtest=df.rdd.map(line =>line.toString())
+    val showonline=dff.rdd.map(line =>line.toString())
     println(df.rdd.map(_.toString).subtract(dff.rdd.map(_.toString)).count)
     println(df.rdd.subtract(dff.rdd).count())
     println(df.count)
     println(dff.count)
   }
 
+  /**
+    * 根据前后缀 注入date
+    * @param date
+    * @param prefix
+    * @return
+    */
   def strSubstitutor(date:Date,prefix: String)={
     val res: util.Map[String, String] = new util.HashMap[String, String]
     res.put(prefix + "year", DateFormatUtils.format(date, "yyyy"))
@@ -79,9 +85,10 @@ object readParquet {
 //    println(getValue1(test))
     val online = "video_event_id\tservice\ttype\tcode\terror_message\tcupid_user_id\tuaa_user_id\tuser_ip\tcountry_id\tprovince_id\tcity_id\tisp_id\tisp_province_id\tisp_city_id\tchannel_id\tnetwork_type\tad_info\tad_player_id\tuser_agent\trequest_duration\trequest_count\tcustom_info\tlog_time\tapp_version\tsdk_version\tplatform_id\twebsite_id\tis_offline\tis_vip\trequest_id\tdevice_idfa\tdevice_open_udid\tdevice_imei\tdevice_android_id\tdevice_android_advertising_id\tdevice_mac_address\tis_vip_movie\tplay_source\ttraffic_partition_type\tuser_vip_type\tvideo_vip_type\talbum_id\tepisode_id\tmobile_key\tchannel_filter_tags\tfrom_type\tfrom_sub_type\tepisode_type"
 //    println(getValue(online))
-    val testPath="C:\\Users\\qizhiwei\\Desktop\\part-11571-2034c1b8-97c9-4ecd-934b-ee0b759cd483.c000.snappy.parquet"
+    val testPath="C:\\Users\\qizhiwei\\Desktop\\part-11586-2034c1b8-97c9-4ecd-934b-ee0b759cd483.c000.snappy.parquet"
     val onlinePath="C:\\Users\\qizhiwei\\Desktop\\part-11571-2034c1b8-97c9-4ecd-934b-ee0b759cd483.c000.snappy (2).parquet"
-//    readparquet(testPath,onlinePath)
+    val spark = SparkSession.builder().appName("parquet").master("local[2]").getOrCreate()
+    readparquet(testPath,onlinePath)
 //    testStrSubstitutor()
 //    testStrSubstitutor1()
     val str="/data/{year}{month}{day}{hour}/*.log.gz,/data/{year}/{month}/{day}/{hour}/*.gz"
