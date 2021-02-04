@@ -16,7 +16,7 @@ object readParquet {
   def getValue1(line: String) = {
     val strs = new StringBuffer()
     val fields = line.split("\t")
-    for (i <- 0 to fields.length - 1) {
+    for (i <- 0 until fields.length) {
       if (i != 11 && i != 12)
         strs.append(fields(i) + ",")
     }
@@ -26,7 +26,7 @@ object readParquet {
   def getValue(line: String) = {
     val strs = new StringBuffer()
     val fields = line.split("\t")
-    for (i <- 0 to fields.length - 1) {
+    for (i <- 0 until fields.length) {
       if (i == 1 || i == 2 || i == 3 || i == 5 || i == 25 || i == 29)
         strs.append(fields(i) + ",")
     }
