@@ -11,7 +11,7 @@ object JsonTest {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
       .builder
-      .appName("Parquet")
+      .appName("JsonTest")
       .getOrCreate()
     val df = spark.read.json("src/main/resources/people.json")
     //第一个参数为显示行数 第二个为是否完整显示列数据 ，默认 true 不完整显示列数据

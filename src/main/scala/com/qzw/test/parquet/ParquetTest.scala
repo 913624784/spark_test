@@ -11,7 +11,7 @@ object ParquetTest {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession
       .builder
-      .appName("Parquet")
+      .appName("ParquetTest")
       .getOrCreate()
     val df = spark.read.parquet("src/main/resources/users.parquet")
     //false 代表输出完整的列数据，默认为 true 截断显示
