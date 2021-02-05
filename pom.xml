@@ -16,7 +16,7 @@
         <scala.test.version>3.0.5</scala.test.version>
         <scalaCompatVersion>2.11</scalaCompatVersion>
         <spark.version>2.3.3</spark.version>
-        <kafka.version>0.10.2.0</kafka.version>
+        <kafka.version>2.3.0</kafka.version>
         <mysql.version>5.1.46</mysql.version>
         <protobuf.version>2.5.0</protobuf.version>
         <scopt.version>3.7.0</scopt.version>
@@ -28,11 +28,6 @@
         <mvel2.version>2.4.4.Final</mvel2.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-library</artifactId>
-            <version>${scala.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.11</artifactId>
@@ -49,11 +44,7 @@
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId> spark-core_2.11</artifactId>
-            <version>${spark.version}</version>
-        </dependency>
+
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-compiler</artifactId>
