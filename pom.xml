@@ -20,7 +20,7 @@
         <mysql.version>5.1.46</mysql.version>
         <protobuf.version>2.5.0</protobuf.version>
         <scopt.version>3.7.0</scopt.version>
-        <snakeyaml.version>1.17</snakeyaml.version>
+        <snakeyaml.version>1.26</snakeyaml.version>
         <okhttp.version>3.10.0</okhttp.version>
         <redis.version>2.9.0</redis.version>
         <fastjson.version>1.2.58</fastjson.version>
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
-            <version>1.17</version>
+            <version>1.26</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
         <dependency>
