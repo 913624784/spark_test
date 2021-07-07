@@ -3,18 +3,18 @@ package com.qzw.test.operator.transformation
 import org.apache.spark.{SparkConf, SparkContext}
 
 object cartesian {
-    def main(args: Array[String]): Unit = {
-      val conf = new SparkConf().setMaster("local[3]").setAppName("app")
-      val sc = new SparkContext(conf)
+  def main(args: Array[String]): Unit = {
+    val conf = new SparkConf().setMaster("local[3]").setAppName("app")
+    val sc = new SparkContext(conf)
 
-      val list1 = List(1,2,3,4,5)
-      val list2 = List(60,70,80,90,100)
+    val list1 = List(1, 2, 3, 4, 5)
+    val list2 = List(60, 70, 80, 90, 100)
 
-      val rdd1 = sc.parallelize(list1)
-      val rdd2 = sc.parallelize(list2)
+    val rdd1 = sc.parallelize(list1)
+    val rdd2 = sc.parallelize(list2)
 
-      //两个RDD进行笛卡尔积合并
-      println(rdd1.cartesian(rdd2).collect.toList)
+    //两个RDD进行笛卡尔积合并
+    println(rdd1.cartesian(rdd2).collect.toList)
 
   }
 }

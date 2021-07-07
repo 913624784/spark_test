@@ -12,10 +12,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <scala.version>2.11.12</scala.version>
+        <scala.version>2.12.13</scala.version>
         <scala.test.version>3.0.5</scala.test.version>
-        <scalaCompatVersion>2.11</scalaCompatVersion>
-        <spark.version>2.3.3</spark.version>
+        <scalaCompatVersion>2.12</scalaCompatVersion>
+        <spark.version>3.1.2</spark.version>
         <kafka.version>2.3.0</kafka.version>
         <mysql.version>5.1.46</mysql.version>
         <protobuf.version>2.5.0</protobuf.version>
@@ -30,13 +30,13 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.11</artifactId>
+            <artifactId>spark-core_${scalaCompatVersion}</artifactId>
             <version>${spark.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.11</artifactId>
+            <artifactId>spark-sql_${scalaCompatVersion}</artifactId>
             <version>${spark.version}</version>
         </dependency>
         <dependency>
@@ -63,7 +63,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-hive_2.11</artifactId>
+            <artifactId>spark-hive_${scalaCompatVersion}</artifactId>
             <version>${spark.version}</version>
         </dependency>
         <dependency>

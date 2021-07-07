@@ -14,7 +14,7 @@ object coalesce {
     //用于将RDD进行重分区，使用HashPartitioner。
     // 且该RDD的分区个数等于numPartitions个数。
     // 如果shuffle设置为true，则会进行shuffle。
-    val datasRDD2 = datasRDD.coalesce(8,false)
+    val datasRDD2 = datasRDD.coalesce(8, false)
     println("RDD的分区数: " + datasRDD2.partitions.length)
 
   }

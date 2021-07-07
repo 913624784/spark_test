@@ -7,26 +7,27 @@ import org.apache.commons.io.IOUtils
 import org.yaml.snakeyaml.Yaml
 
 /**
-  * @author Qi zhiwei
-  * @date 2019/8/2 9:36
-  * @version 1.0
-  */
+ * @author Qi zhiwei
+ * @date 2019/8/2 9:36
+ * @version 1.0
+ */
 object LocalRunner {
-  private def getComplexFieldType(other:String)={
-    var index,gap =0
+  private def getComplexFieldType(other: String) = {
+    var index, gap = 0
     var stop = false
-    while (!stop){
+    while (!stop) {
       if (other(index) == '<')
-        gap=gap+1
-      if (other(index) == '>'){
-        gap = gap-1
+        gap = gap + 1
+      if (other(index) == '>') {
+        gap = gap - 1
         if (gap == 0)
           stop = true
       }
       index = index + 1
     }
-    other.substring(0,index)
+    other.substring(0, index)
   }
+
   def main(args: Array[String]): Unit = {
     val ts = System.currentTimeMillis()
     val cmdParser = Cmd.getParser()
@@ -40,7 +41,7 @@ object LocalRunner {
         println(Proto)
 
       }
-      case  None =>
+      case None =>
     }
     println(getComplexFieldType("array<struct<key:string,value:string>>"))
   }

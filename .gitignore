@@ -4,4 +4,4 @@ out/
 target/
 metastore_db/
 spark-warehouse/
-derby.log
+*.log

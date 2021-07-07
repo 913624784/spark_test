@@ -37,17 +37,17 @@ object filter {
     //    val rddnew = sc.textFile("E://a.txt").map(line => (line, getString(line).hashCode))
     //    rddnew.filter(t => t._2.equals(list(0))).take(5).foreach(println)
 
-//    val logFilePath = this.getClass.getResource("/old_pingback.log")
-//    val reader = new BufferedReader(new FileReader(new File(logFilePath.getFile())))
+    //    val logFilePath = this.getClass.getResource("/old_pingback.log")
+    //    val reader = new BufferedReader(new FileReader(new File(logFilePath.getFile())))
 
-    println(getString("anknsj iknsaon snaknis san s","san,iknsaon"))
+    println(getString("anknsj iknsaon snaknis san s", "san,iknsaon"))
   }
 
 
   def getString(line: String, notfields: String): String = {
     var linestr = ""
-    var s=notfields.replace(",","|")
-    linestr=line.replaceAll("("+s+")","")
+    var s = notfields.replace(",", "|")
+    linestr = line.replaceAll("(" + s + ")", "")
     linestr
   }
 }
